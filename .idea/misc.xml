@@ -5,7 +5,11 @@
       <map>
         <entry key="..\:/PetsHelp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.156" />
         <entry key="..\:/PetsHelp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.156" />
+        <entry key="..\:/PetsHelp/app/src/main/res/drawable/splash.xml" value="0.2" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_main.xml" value="0.20380434782608695" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_splash.xml" value="0.12121212121212122" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/as.xml" value="0.25052083333333336" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/splash_activity.xml" value="0.21458333333333332" />
       </map>
     </option>
   </component>
