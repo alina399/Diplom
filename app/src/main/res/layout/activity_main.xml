@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fon" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/body_start_page"
+        android:layout_width="match_parent"
+        android:layout_height="730dp"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/signin_btn"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green"
+            android:text="ЛИЧНЫЙ КАБИНЕТ"
+            android:textSize="8pt"
+            app:cornerRadius="15dp"
+            android:textColor="@color/bejev"
+            />
+
+        <Button
+            android:id="@+id/signup_btn"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/green"
+            android:text="РЕГИСТРАЦИЯ"
+            android:textSize="8pt"
+            app:cornerRadius="15dp"
+            android:textColor="@color/black"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/lable"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="55dp"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
