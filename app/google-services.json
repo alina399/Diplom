@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1044248182805",
+    "project_id": "test2-a8e1a",
+    "storage_bucket": "test2-a8e1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044248182805:android:1a5dcbb7f009efca9f4e1c",
+        "android_client_info": {
+          "package_name": "com.example.petshelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044248182805-8302hp3mbm7u2erjuv34hj6knreo3ql3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBciZbKcSdN3KACfbOemr6Sna-RKynD8ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044248182805-8302hp3mbm7u2erjuv34hj6knreo3ql3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

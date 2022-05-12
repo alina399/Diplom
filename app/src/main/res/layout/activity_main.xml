@@ -5,75 +5,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/fon"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/fon" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/body_start_page"
-        android:layout_width="match_parent"
-        android:layout_height="730dp"
-        android:gravity="center"
-        android:orientation="vertical"
+    <Button
+        android:id="@+id/signin_btn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/green"
+        android:onClick="toSigninActivity"
+        android:text="@string/auth"
+        android:textColor="@color/bejev"
+        android:textSize="23dp"
+        android:textStyle="italic"
+        app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.688" />
 
-        <Button
-            android:id="@+id/signin_btn"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="500dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/green"
-            android:text="ЛИЧНЫЙ КАБИНЕТ"
-            android:textSize="23dp"
-            app:cornerRadius="15dp"
-            android:textColor="@color/bejev"
-            android:textStyle="italic"
-            />
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/green"
+        android:onClick="toSignUp"
+        android:text="РЕГИСТРАЦИЯ"
+        android:textColor="@color/bejev"
+        android:textSize="23dp"
+        android:textStyle="italic"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801" />
 
-        <Button
-            android:id="@+id/signup_btn"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="@color/green"
-            android:text="РЕГИСТРАЦИЯ"
-            android:textSize="23dp"
-            app:cornerRadius="15dp"
-            android:textColor="@color/bejev"
-            android:textStyle="italic"
-            />
-
-
-    </LinearLayout>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:src="@drawable/lable"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="55dp"
-            android:padding="10dp"
-            />
-    </LinearLayout>
-
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:padding="10dp"
+        android:src="@drawable/lable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
