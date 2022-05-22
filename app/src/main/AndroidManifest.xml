@@ -10,8 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsHelp">
         <activity
-            android:name=".PersonalActivity"
+            android:name=".infoPriutActivity"
             android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.PetsHelp.NoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PersonActivity"
+            android:exported="false"
+            android:label="@string/title_activity_person"
+            android:theme="@style/Theme.PetsHelp.NoActionBar" />
         <activity
             android:name=".SignUp"
             android:exported="false" />

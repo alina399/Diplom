@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/priut"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Информация о приюте" />
+        <item
+            android:id="@+id/partners"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Партнёры" />
+        <item
+            android:id="@+id/pets_minus"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Пристраиваемые животные" />
+        <item
+            android:id="@+id/pets_plus"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Пристроенные животные" />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_menu_exit"
+            android:title="@string/menu_exit"
+            android:onClick="To_Exit_Button"/>
+    </group>
+</menu>

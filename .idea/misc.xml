@@ -6,17 +6,37 @@
         <entry key="..\:/PetsHelp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.156" />
         <entry key="..\:/PetsHelp/app/src/main/res/drawable/bg_btn.xml" value="0.2275" />
         <entry key="..\:/PetsHelp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.156" />
+        <entry key="..\:/PetsHelp/app/src/main/res/drawable/ic_menu_camera.xml" value="0.214" />
+        <entry key="..\:/PetsHelp/app/src/main/res/drawable/ic_menu_exit.xml" value="0.214" />
+        <entry key="..\:/PetsHelp/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.214" />
         <entry key="..\:/PetsHelp/app/src/main/res/drawable/shape.xml" value="0.152" />
         <entry key="..\:/PetsHelp/app/src/main/res/drawable/shape_2.xml" value="0.2275" />
+        <entry key="..\:/PetsHelp/app/src/main/res/drawable/side_nav_bar.xml" value="0.214" />
         <entry key="..\:/PetsHelp/app/src/main/res/drawable/splash.xml" value="0.2" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_info_priut.xml" value="0.11302083333333333" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_person.xml" value="0.2" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_personal.xml" value="0.25416666666666665" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_profile.xml" value="0.23854166666666668" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_sign_in.xml" value="0.264" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_sign_up.xml" value="0.228125" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_signin.xml" value="0.24010416666666667" />
-        <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_splash.xml" value="0.12121212121212122" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/app_bar_person.xml" value="0.23854166666666668" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/as.xml" value="0.25052083333333336" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/content_person.xml" value="0.23854166666666668" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/fragment_exit.xml" value="0.23854166666666668" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/fragment_gallery.xml" value="0.23854166666666668" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/fragment_home.xml" value="0.23854166666666668" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/fragment_menu.xml" value="0.24010416666666667" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/fragment_slideshow.xml" value="0.23854166666666668" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/nav_header_person.xml" value="0.23854166666666668" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/sign_in.xml" value="0.24010416666666667" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/splash_activity.xml" value="0.21458333333333332" />
+        <entry key="..\:/PetsHelp/app/src/main/res/menu/activity_main_drawer.xml" value="0.23854166666666668" />
+        <entry key="..\:/PetsHelp/app/src/main/res/menu/person.xml" value="0.25416666666666665" />
         <entry key="..\:/PetsHelp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.214" />
       </map>
     </option>

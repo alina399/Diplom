@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser()!= null){
             Toast.makeText(getApplicationContext(), "Вход выполнен!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MainActivity.this, PersonalActivity.class);
+            Intent intent = new Intent(MainActivity.this, PersonActivity.class);
             startActivity(intent);
             finish();
         } else {
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+
     }
 
     public void toSignUp(View view) {

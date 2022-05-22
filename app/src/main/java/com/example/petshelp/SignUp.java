@@ -58,9 +58,6 @@ public class SignUp extends AppCompatActivity {
                     finish();
                 }else{
                     Toast.makeText(SignUp.this, "Регистрация не выполнена!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SignUp.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
                 }
 
             }

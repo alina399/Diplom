@@ -36,15 +36,27 @@ public class SignIn extends AppCompatActivity {
         String PasswordStr = Password.getText().toString();
         String EmailStr = Email.getText().toString();
 
+        if (PasswordStr.equals("")) {
+            Toast.makeText(this, "Пароль пустой!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (EmailStr.equals("")) {
+            Toast.makeText(this, "E-mail пустой!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         FirebaseAuth auth = FirebaseAuth.getInstance();
         auth.signInWithEmailAndPassword(EmailStr, PasswordStr).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(getApplicationContext(), "Вход выполнен!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SignIn.this, PersonalActivity.class);
+                    Intent intent = new Intent(SignIn.this, PersonActivity.class);
                     startActivity(intent);
                     finish();
+                } else {
+                    Toast.makeText(SignIn.this, "Вход не выполнен!", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
