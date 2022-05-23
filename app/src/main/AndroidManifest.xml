@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsHelp">
         <activity
-            android:name=".infoPriutActivity"
+            android:name=".PetsPlusActivity"
             android:exported="false" />
         <activity
             android:name=".Menu"

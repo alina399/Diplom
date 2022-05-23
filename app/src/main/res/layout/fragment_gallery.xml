@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.gallery.GalleryFragment">
-
     <TextView
         android:id="@+id/text_gallery"
         android:layout_width="match_parent"
@@ -19,4 +18,177 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/lozng"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="Cпасая жизнь - обретаешь друга!"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+
+    <TextView
+        android:id="@+id/textViewz"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="+7 (927) 731-68-64"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="E-mail: petshelp@yandex.ru"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="Наш адрес: г.Нижний Новгород,     ул. Бурнаковский проезд, д.16"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text=" Деятельность нашего приюта направлена на помощь бездомным животным Нижнего Новгорода в целом.
+                                                       Мы содержим приют собак и кошек."
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="График работы приюта:
+Вт-Сб: с 11:00 до 18:00                                      Вс, Пн - выходные дни"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_clock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/icon_telephone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/icon_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.711" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/icon_adress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="230dp"
+        android:layout_height="140dp"
+        android:src="@drawable/priut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
