@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,4 +20,138 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lozng"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:text="Нам помогают"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.023" />
+
+            <ImageView
+                android:id="@+id/ToLapushki"
+                android:layout_width="230dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shape"
+                android:padding="8dp"
+                android:src="@drawable/lapushki"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintCircleRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.221" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:text="Зоомагазин 'Лапушки'"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.747"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.62" />
+
+            <ImageView
+                android:id="@+id/ToZooSfera"
+                android:layout_width="230dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shape"
+                android:padding="3dp"
+                android:src="@drawable/zoosfera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintCircleRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.638" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:text="Зоомагазин 'ZooСфера'"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.747"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.62" />
+
+
+            <ImageView
+                android:id="@+id/ToSber"
+                android:layout_width="230dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shape"
+                android:padding="3dp"
+                android:src="@drawable/sber"
+                app:layout_constraintCircleRadius="15dp"
+                tools:layout_editor_absoluteX="95dp"
+                tools:layout_editor_absoluteY="633dp" />
+
+            <TextView
+                android:id="@+id/textViewz"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:text="Банк 'СБЕР'"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.747"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.62" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
