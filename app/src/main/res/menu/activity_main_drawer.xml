@@ -18,9 +18,9 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
         <item
-            android:id="@+id/nav_petsplus"
+            android:id="@+id/nav_petsminus"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_pets_plus" />
+            android:title="@string/menu_petsminus" />
 
         <item
             android:id="@+id/nav_exit"

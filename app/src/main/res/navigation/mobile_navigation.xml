@@ -22,4 +22,9 @@
         android:name="com.example.petshelp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_petsminus"
+        android:name="com.example.petshelp.ui.petsminus.PetsMinus"
+        android:label="@string/menu_petsminus"
+        tools:layout="@layout/pets_minus_fragment"/>
 </navigation>

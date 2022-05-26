@@ -39,7 +39,7 @@
 
 
     <TextView
-        android:id="@+id/textViewz"
+        android:id="@+id/ToNumber"
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:background="@drawable/shape"
@@ -47,6 +47,7 @@
         android:text="+7 (927) 731-68-64"
         android:textColor="@color/black"
         android:textSize="17dp"
+        android:autoLink="phone"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
