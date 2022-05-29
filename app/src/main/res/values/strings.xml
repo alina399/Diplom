@@ -13,10 +13,13 @@
     <string name="menu_gallery">Информация о приюте</string>
     <string name="menu_slideshow">Партнёры</string>
     <string name="menu_petsminus">Пристраиваемые животные</string>
+    <string name="menu_petspristr">Пристроенные животные</string>
     <string name="menu_exit">Выход</string>
     <string name="title_activity_menu">Menu</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="helpText">Чтобы помочь приюту Вы можете:\n1) перейти на страницу \'Партнёры\', перейти по ссылкам организаций партнёров и купить зоотовары, которые также можете привезти в приют;\n2) перейти по ссылке указанной ниже, в которой сможете перевести деньги для помощи животным</string>
+    <string name="helppriut">Помощь приюту</string>
 
 
 </resources>

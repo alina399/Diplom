@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsHelp">
         <activity
+            android:name=".petsProfile"
+            android:exported="false" />
+        <activity
             android:name=".Test1"
             android:exported="false" />
         <activity

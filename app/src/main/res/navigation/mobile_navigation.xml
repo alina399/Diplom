@@ -27,4 +27,14 @@
         android:name="com.example.petshelp.ui.petsminus.PetsMinus"
         android:label="@string/menu_petsminus"
         tools:layout="@layout/pets_minus_fragment"/>
+    <fragment
+        android:id="@+id/nav_petsprist"
+        android:name="com.example.petshelp.ui.petspristr.PetsPristrFragment"
+        android:label="@string/menu_petspristr"
+        tools:layout="@layout/pets_pristr_fragment"/>
+    <fragment
+        android:id="@+id/nav_helppriut"
+        android:name="com.example.petshelp.helpPriutFragment"
+        android:label="Помощь приюту"
+        tools:layout="@layout/fragment_help_priut"/>
 </navigation>

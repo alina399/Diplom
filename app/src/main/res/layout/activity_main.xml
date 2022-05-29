@@ -43,9 +43,10 @@
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
+        app:layout_constraintVertical_bias="0.87" />
 
     <ImageView
+        android:id="@+id/imageView7"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:padding="10dp"

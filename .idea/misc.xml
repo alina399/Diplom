@@ -3,6 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/activity_pets_profile.xml" value="0.33" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/activity_profile.xml" value="0.3625" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/activity_sign_in.xml" value="0.3625" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/activity_sign_up.xml" value="0.3625" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/activity_splash.xml" value="0.3625" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/activity_test1.xml" value="0.18541666666666667" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/app_bar_person.xml" value="0.3625" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/fragment_help_priut.xml" value="0.18541666666666667" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/fragment_menu.xml" value="0.3625" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/fragment_slideshow.xml" value="0.18541666666666667" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/list_item.xml" value="0.184375" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/pets_minus_fragment.xml" value="0.18541666666666667" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/layout/pets_pristr_fragment.xml" value="0.18541666666666667" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
+        <entry key="..\:/Android/PetsHelp/app/src/main/res/menu/person.xml" value="0.18541666666666667" />
         <entry key="..\:/PetsHelp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.156" />
         <entry key="..\:/PetsHelp/app/src/main/res/drawable/bg_btn.xml" value="0.2275" />
         <entry key="..\:/PetsHelp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.156" />
@@ -39,6 +56,7 @@
         <entry key="..\:/PetsHelp/app/src/main/res/layout/fragment_slideshow.xml" value="0.264" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/nav_header_person.xml" value="0.23854166666666668" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/pets_minus_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/PetsHelp/app/src/main/res/layout/pets_pristr_fragment.xml" value="0.25025641025641027" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/petsminus_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/pits_minus_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/PetsHelp/app/src/main/res/layout/sign_in.xml" value="0.24010416666666667" />
@@ -46,10 +64,18 @@
         <entry key="..\:/PetsHelp/app/src/main/res/menu/activity_main_drawer.xml" value="0.23854166666666668" />
         <entry key="..\:/PetsHelp/app/src/main/res/menu/person.xml" value="0.25416666666666665" />
         <entry key="..\:/PetsHelp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.214" />
+        <entry key="..\:/new/PetsHelp/app/src/main/res/layout/activity_pets_profile.xml" value="0.25" />
+        <entry key="..\:/new/PetsHelp/app/src/main/res/layout/activity_profile.xml" value="0.15052083333333333" />
+        <entry key="..\:/new/PetsHelp/app/src/main/res/layout/activity_test1.xml" value="0.264" />
+        <entry key="..\:/new/PetsHelp/app/src/main/res/layout/fragment_help_priut.xml" value="0.1421875" />
+        <entry key="..\:/new/PetsHelp/app/src/main/res/layout/nav_header_person.xml" value="0.1421875" />
+        <entry key="..\:/new/PetsHelp/app/src/main/res/layout/pets_minus_fragment.xml" value="0.1421875" />
+        <entry key="..\:/new/PetsHelp/app/src/main/res/layout/pets_pristr_fragment.xml" value="0.264" />
+        <entry key="..\:/new/PetsHelp/app/src/main/res/menu/activity_main_drawer.xml" value="0.15052083333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -21,11 +21,22 @@
             android:id="@+id/nav_petsminus"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_petsminus" />
+        <item
+            android:id="@+id/nav_petsprist"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_petspristr" />
 
         <item
-            android:id="@+id/nav_exit"
+            android:id="@+id/nav_helppriut"
+            android:icon="@drawable/ic_menu_exit"
+            android:title="@string/helppriut" />
+
+         <item
+             android:id="@+id/nav_exit"
             android:icon="@drawable/ic_menu_exit"
             android:title="@string/menu_exit"
             android:onClick="To_Exit_Button"/>
+
+
     </group>
 </menu>
