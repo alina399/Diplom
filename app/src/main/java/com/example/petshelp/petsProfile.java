@@ -39,8 +39,9 @@ import java.io.IOException;
 public class petsProfile extends AppCompatActivity {
 TextView id;
 EditText qname, age, history;
-Button savebutton;
+Button savebutton, pristroit;
 ImageView imageView;
+private String photo;
     private FirebaseStorage storage;
     private StorageReference storageReference;
     private Uri filePath;
@@ -49,6 +50,7 @@ ImageView imageView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pets_profile);
+        pristroit = (Button) findViewById(R.id.pristroit);
         savebutton = (Button) findViewById(R.id.save_profile_pets);
         imageView = (ImageView) findViewById(R.id.choosepets);
         qname = (EditText) findViewById(R.id.textFieldNamePets);
@@ -90,19 +92,37 @@ ImageView imageView;
                 DatabaseReference reference;
                 reference = FirebaseDatabase.getInstance().getReference();
 
-                Pitomec pitomec = new Pitomec(qname.getText().toString(),age.getText().toString(),history.getText().toString(),"",idPit);
-                reference.child("Pitomec").child(idPit).setValue(pitomec);
                 uploadImage();
+
+                Pitomec pitomec = new Pitomec(qname.getText().toString(),age.getText().toString(),history.getText().toString(),photo,idPit,"");
+                reference.child("Pitomec").child(idPit).setValue(pitomec);
+
                 Toast.makeText(petsProfile.this, "Сохранено!", Toast.LENGTH_SHORT).show();
             }
         });
 
+        pristroit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference reference;
+                reference = FirebaseDatabase.getInstance().getReference();
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String emailGo = user.getEmail().toString();
+                Pitomec pitomec = new Pitomec(qname.getText().toString(),age.getText().toString(),history.getText().toString(),"Yes",idPit,emailGo);
+                reference.child("PitomecPristr").child(idPit).setValue(pitomec);
+                reference.child("Pitomec").child(idPit).removeValue();
+                Toast.makeText(petsProfile.this, "Вы пристроили питомца", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(petsProfile.this,PersonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
 
-    public void ToPetsPtistr(View view) {
-        Intent intent = new Intent(this, PersonActivity.class);
-    startActivity(intent);
-    }
+
 
     public void choosepit(View view) {
         Intent intent = new Intent();
@@ -142,6 +162,9 @@ ImageView imageView;
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
                             Toast.makeText(petsProfile.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                            DatabaseReference reference;
+                            reference = FirebaseDatabase.getInstance().getReference();
+                            reference.child("Pitomec").child(id.getText().toString()).child("photo").setValue("Yes");
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -157,6 +180,7 @@ ImageView imageView;
                             double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
                                     .getTotalByteCount());
                             progressDialog.setMessage("Uploaded "+(int)progress+"%");
+                            photo = "Yes";
                         }
                     });
         }

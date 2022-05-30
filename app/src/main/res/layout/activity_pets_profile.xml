@@ -1,125 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".petsProfile"
     >
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:backgroundTint="@color/green"
-        android:onClick="ToPetsPtistr"
-        android:text="НАЗАД"
-        android:textColor="@color/bejev"
-        android:textSize="15dp"
-        android:textStyle="italic"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
 
-    <ImageButton
-        android:id="@+id/choosepets"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:onClick="choosepit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintCircleRadius="700dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208" />
 
-    <TextView
-        android:id="@+id/idpets"
-        android:layout_width="210dp"
-        android:layout_height="45dp"
-        android:background="@drawable/shape_2"
-        android:hint="ID животного"
-        android:inputType="textEmailAddress"
-        android:padding="8dp"
-        android:textAlignment="textStart"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.965"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.173" />
 
-    <EditText
-        android:id="@+id/textFieldNamePets"
-        android:layout_width="210dp"
-        android:layout_height="45dp"
-        android:background="@drawable/shape_2"
-        android:hint="Кличка животного"
-        android:padding="8dp"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.965"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252" />
 
-    <EditText
-        android:id="@+id/textFieldAge"
-        android:layout_width="210dp"
-        android:layout_height="45dp"
-        android:background="@drawable/shape_2"
-        android:hint="Возраст животного"
-        android:padding="8dp"
-        android:textAlignment="textStart"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.965"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
+        <ImageButton
+            android:id="@+id/choosepets"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:onClick="choosepit" />
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginLeft="2dp"
+           android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/idpets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shape_2"
+            android:hint="ID животного"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/textFieldNamePets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_2"
+            android:hint="Кличка животного"
+            android:padding="8dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/textFieldAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_2"
+            android:hint="Возраст животного"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+    </LinearLayout>
     <EditText
         android:id="@+id/textFieldHaract"
-        android:layout_width="342dp"
-        android:layout_height="287dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/shape_2"
-
         android:hint="История животного"
         android:padding="8dp"
         android:textAlignment="textStart"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689" />
-
+        android:textSize="15dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
     <Button
         android:id="@+id/save_profile_pets"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/green"
         android:text="Сохранить"
         android:textColor="@color/bejev"
-        android:textSize="23dp"
+        android:textSize="20dp"
         android:textStyle="italic"
         app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
+  />
+    <Button
+        android:id="@+id/pristroit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/green"
+        android:text="Пристроить"
+        android:textColor="@color/bejev"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_marginLeft="5dp"
+        app:cornerRadius="15dp"/>
+    </LinearLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
