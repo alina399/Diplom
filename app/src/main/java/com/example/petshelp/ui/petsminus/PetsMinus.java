@@ -32,8 +32,12 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 
 
@@ -45,6 +49,8 @@ public class PetsMinus extends Fragment {
     Button button;
     Random random;
     final String LOG_TAG = "myLogs";
+    private FirebaseStorage storage;
+    private StorageReference storageReference;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -83,6 +89,8 @@ public class PetsMinus extends Fragment {
         // настраиваем список
         ListView listView = (ListView) inflatedView.findViewById(R.id.listView);
         listView.setAdapter(boxAdapter);
+        int size = products.size();
+        Log.e("1",String.valueOf(size));
 
         // Прослушиваем нажатия клавиш
         name.setOnKeyListener(new View.OnKeyListener() {
@@ -90,16 +98,16 @@ public class PetsMinus extends Fragment {
                 if (event.getAction() == KeyEvent.ACTION_DOWN)
                     if (keyCode == KeyEvent.KEYCODE_ENTER) {
 
-                        int min = 100000;
-                        int max = 999999;
-                        int diff = max - min;
-                        Random random = new Random();
-                        int i = random.nextInt(diff + 1);
-                        i += min;
-                        String idPitomic = String.valueOf(i);
 
 
-                        Pitomec pitomec = new Pitomec(name.getText().toString(),"","","",idPitomic,"");
+                        int size = products.size();
+                        
+                        String idPitomic = String.valueOf(size);
+
+                        storage = FirebaseStorage.getInstance();
+                        storageReference = storage.getReference();
+                        String ref = "images/"+ "pitomec"+".png";
+                        Pitomec pitomec = new Pitomec(name.getText().toString(),"","",ref,idPitomic,"");
 
                         DatabaseReference reference;
                         reference = FirebaseDatabase.getInstance().getReference();
@@ -108,9 +116,6 @@ public class PetsMinus extends Fragment {
 
 
                         name.setText("");
-                        Intent intent = new Intent(PetsMinus.this.getActivity(), petsProfile.class);
-                        intent.putExtra("id",  idPitomic);
-                        startActivity(intent);
                         return true;
                     }
                 return false;
@@ -125,8 +130,11 @@ public class PetsMinus extends Fragment {
 
 
                 Pitomec msg = snapshot.getValue(Pitomec.class);
-                products.add(0,msg);
+                products.add(msg);
                 boxAdapter.notifyDataSetChanged();
+                int size = products.size();
+                Log.e("1",String.valueOf(size));
+               // Toast.makeText(PetsMinus.this.getActivity(), String.valueOf(size), Toast.LENGTH_SHORT).show();
             }
 
             @Override

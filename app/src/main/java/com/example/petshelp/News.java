@@ -2,8 +2,8 @@ package com.example.petshelp;
 
 public class News {
     public String name;
-    public String text;
     public String data;
+    public String text;
     public String id;
     public String idPit;
 
@@ -11,11 +11,11 @@ public class News {
     public News() {
 
     }
-    public News(String name, String text, String data, String id, String idPit) {
+    public News(String name, String data, String text, String id, String idPit) {
 
         this.name = name;
-        this.text = text;
         this.data = data;
+        this.text = text;
         this.id = id;
         this.idPit = idPit;
 

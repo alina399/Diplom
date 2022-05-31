@@ -73,8 +73,17 @@ public class AdapterPitomec extends BaseAdapter {
         ((TextView) view.findViewById(R.id.adapterAge)).setText(p.age);
         ((TextView) view.findViewById(R.id.adapterId)).setText(p.id);
         imageView = (ImageView) view.findViewById(R.id.adapterImage);
-    if(p.photo.equals("Yes")){
-        RebutImage(p.id);}
+
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
+        StorageReference ref = storageReference.child(p.photo);
+        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri.toString()).into(imageView);
+            }
+        });
+
         ImageButton perehod = (ImageButton) view.findViewById(R.id.perehod);
         perehod.setOnClickListener(new View.OnClickListener() {
             @Override

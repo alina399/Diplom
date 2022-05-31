@@ -35,6 +35,10 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Random;
 
 public class petsProfile extends AppCompatActivity {
 TextView id;
@@ -91,14 +95,34 @@ private String photo;
             public void onClick(View v) {
                 DatabaseReference reference;
                 reference = FirebaseDatabase.getInstance().getReference();
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String emailGo = user.getEmail().toString();
+
+
+                int min = 100000;
+                int max = 999999;
+                int diff = max - min;
+                Random random = new Random();
+                int i = random.nextInt(diff + 1);
+                i += min;
+                String idPitomic = String.valueOf(i);
+
+
+
 
                 uploadImage();
-
-                Pitomec pitomec = new Pitomec(qname.getText().toString(),age.getText().toString(),history.getText().toString(),photo,idPit,"");
+                String ref = "images/"+ idPit+".jpg";
+                Pitomec pitomec = new Pitomec(qname.getText().toString(),age.getText().toString(),history.getText().toString(),ref,idPit,"");
                 reference.child("Pitomec").child(idPit).setValue(pitomec);
+                Date current = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
+                String date = formatter.format(current);
+                News news = new News("Нашли нового питомца",date.toString(),NewsTextUp(emailGo,qname.getText().toString(),idPit, history.getText().toString()),idPitomic,idPit);
+                reference.child("News").child(idPitomic).setValue(news);
 
                 Toast.makeText(petsProfile.this, "Сохранено!", Toast.LENGTH_SHORT).show();
             }
+
         });
 
         pristroit.setOnClickListener(new View.OnClickListener() {
@@ -108,9 +132,25 @@ private String photo;
                 reference = FirebaseDatabase.getInstance().getReference();
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 String emailGo = user.getEmail().toString();
-                Pitomec pitomec = new Pitomec(qname.getText().toString(),age.getText().toString(),history.getText().toString(),"Yes",idPit,emailGo);
+                String ref = "images/"+ idPit+".jpg";
+                Pitomec pitomec = new Pitomec(qname.getText().toString(),age.getText().toString(),history.getText().toString(),ref,idPit,emailGo);
                 reference.child("PitomecPristr").child(idPit).setValue(pitomec);
                 reference.child("Pitomec").child(idPit).removeValue();
+
+                int min = 100000;
+                int max = 999999;
+                int diff = max - min;
+                Random random = new Random();
+                int i = random.nextInt(diff + 1);
+                i += min;
+                String idPitomic = String.valueOf(i);
+
+
+                Date current = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
+                String date = formatter.format(current);
+                News news = new News("Пристроили питомца",date.toString(),NewsTextIn(emailGo,qname.getText().toString(),idPit, history.getText().toString()),idPitomic,idPit);
+                reference.child("News").child(idPitomic).setValue(news);
                 Toast.makeText(petsProfile.this, "Вы пристроили питомца", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(petsProfile.this,PersonActivity.class);
                 startActivity(intent);
@@ -162,9 +202,7 @@ private String photo;
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
                             Toast.makeText(petsProfile.this, "Uploaded", Toast.LENGTH_SHORT).show();
-                            DatabaseReference reference;
-                            reference = FirebaseDatabase.getInstance().getReference();
-                            reference.child("Pitomec").child(id.getText().toString()).child("photo").setValue("Yes");
+
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -194,5 +232,23 @@ private String photo;
                 Picasso.get().load(uri.toString()).into(imageView);
             }
         });
+    }
+   private String NewsTextUp(String email, String name, String id, String istory){
+        String text;
+
+        text = "Пользователь " + email + ", нашел нового питомца по кличке " + name + ". ";
+        text += "История питомца: "+ istory + ". ";
+        text += "Питомцу присвоен id: " + id;
+
+        return text;
+   }
+    private String NewsTextIn(String email, String name, String id, String istory){
+        String text;
+
+        text = "Пользователь " + email + ", пристроил питомца  " + name + ". ";
+        text += "История питомца: "+ istory + ". ";
+        text += "Питомцу присвоен id: " + id;
+
+        return text;
     }
 }

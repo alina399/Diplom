@@ -1,5 +1,7 @@
 package com.example.petshelp;
 
+import com.google.firebase.storage.StorageReference;
+
 public class Pitomec {
     public String name;
     public String age;
