@@ -108,6 +108,9 @@ public class PetsMinus extends Fragment {
 
 
                         name.setText("");
+                        Intent intent = new Intent(PetsMinus.this.getActivity(), petsProfile.class);
+                        intent.putExtra("id",  idPitomic);
+                        startActivity(intent);
                         return true;
                     }
                 return false;

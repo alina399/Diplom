@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetsHelp">
         <activity
+            android:name=".ItemNews"
+            android:exported="false" />
+        <activity
             android:name=".test"
             android:exported="false" />
         <activity
