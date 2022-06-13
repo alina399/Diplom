@@ -7,9 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".petsProfile"
+    android:background="@drawable/fon"
     >
-
-
 
 
 
@@ -17,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp">
 
@@ -88,27 +87,28 @@
         android:layout_marginRight="5dp">
     <Button
         android:id="@+id/save_profile_pets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/green"
         android:text="Сохранить"
+        android:layout_marginLeft="7dp"
         android:textColor="@color/bejev"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:textStyle="italic"
         app:cornerRadius="15dp"
   />
     <Button
         android:id="@+id/pristroit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/green"
         android:text="Пристроить"
         android:textColor="@color/bejev"
-        android:textSize="20dp"
+        android:textSize="14dp"
         android:textStyle="italic"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="60dp"
         app:cornerRadius="15dp"/>
     </LinearLayout>
 

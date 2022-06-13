@@ -1,19 +1,19 @@
 package com.example.petshelp.ui.petsminus;
 
-import android.content.Intent;
+
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
+
+
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,31 +26,32 @@ import com.example.petshelp.Pitomec;
 import com.example.petshelp.R;
 
 import com.example.petshelp.databinding.PetsMinusFragmentBinding;
-import com.example.petshelp.petsProfile;
+
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import java.text.SimpleDateFormat;
+
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Random;
 
 
+import java.util.regex.Pattern;
 
 
 public class PetsMinus extends Fragment {
 
     private PetsMinusFragmentBinding binding;
-    Button button;
-    Random random;
-    final String LOG_TAG = "myLogs";
+
+
+
     private FirebaseStorage storage;
     private StorageReference storageReference;
+    EditText editTextSearch;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -71,11 +72,63 @@ public class PetsMinus extends Fragment {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Pitomec");
+        editTextSearch = (EditText) inflatedView.findViewById(R.id.txtsearch);
 
 
+        /////////////////////////////////////////////
+editTextSearch.addTextChangedListener(new TextWatcher() {
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+System.out.println(s);
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                ArrayList<Pitomec> searchPit = new ArrayList<Pitomec>();
+                for (DataSnapshot searchcSnapshot: snapshot.getChildren()){
+                    Pitomec pitomec = searchcSnapshot.getValue(Pitomec.class);
+                    searchPit.add(pitomec);
+
+                }
+                System.out.println(searchPit);
+
+                ArrayList<Pitomec> al2 = new ArrayList<Pitomec>();
+                for(Pitomec pitomec: searchPit){
+                    String namePit = pitomec.name;
+                    if (namePit.matches("(?is)" + ".*" + Pattern.quote(s.toString()) + ".*")) {
+                        al2.add(pitomec);
+                    }
+                }
+                System.out.println(al2);
+                AdapterPitomec boxAdapter;
+                boxAdapter = new AdapterPitomec(PetsMinus.this.getActivity(), al2);
+                // настраиваем список
+                ListView listView = (ListView) inflatedView.findViewById(R.id.listView);
+                listView.setAdapter(boxAdapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                throw error.toException();
+            }
+        });
+    }
+});
+
+        /////////////////////////////////////////////
         // получаем экземпляр элемента ListView
 
         final EditText name = (EditText) inflatedView.findViewById(R.id.editText);
+
 
         // Создаём пустой массив для хранения имен котов
         ArrayList<Pitomec> products = new ArrayList<Pitomec>();
@@ -85,7 +138,6 @@ public class PetsMinus extends Fragment {
 
 
         boxAdapter = new AdapterPitomec(this.getActivity(), products);
-
         // настраиваем список
         ListView listView = (ListView) inflatedView.findViewById(R.id.listView);
         listView.setAdapter(boxAdapter);
@@ -101,7 +153,7 @@ public class PetsMinus extends Fragment {
 
 
                         int size = products.size();
-                        
+
                         String idPitomic = String.valueOf(size);
 
                         storage = FirebaseStorage.getInstance();

@@ -24,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235"
+        app:layout_constraintVertical_bias="0.294"
 
         />
 
@@ -33,7 +33,8 @@
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:background="@drawable/shape_2"
-        android:hint="  E-mail"
+        android:hint="E-mail"
+        android:padding="5dp"
         android:inputType="textEmailAddress"
         android:textAlignment="textStart"
         android:textSize="15dp"
@@ -41,8 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/textfildPassword"
@@ -50,16 +50,17 @@
         android:layout_height="45dp"
         android:background="@drawable/shape_2"
         android:ems="10"
-        android:hint="  Пароль"
+        android:hint="Пароль"
         android:inputType="textEmailAddress"
         android:password="true"
         android:textSize="15dp"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536" />
+        app:layout_constraintVertical_bias="0.602" />
 
     <Button
         android:id="@+id/signup_btn"
@@ -78,7 +79,7 @@
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <Button
         android:layout_width="100dp"

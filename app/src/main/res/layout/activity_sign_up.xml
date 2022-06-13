@@ -9,121 +9,77 @@
     tools:context=".SignUp">
 
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="РЕГИСТРАЦИЯ"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295"
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="300dp"
-            android:layout_height="55dp"
-            android:background="@drawable/shape"
-            android:gravity="center"
-            android:text="РЕГИСТРАЦИЯ"
-            android:textColor="@color/black"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.603"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.22"
+        />
 
-            />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="@drawable/shape_2"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:textAlignment="textStart"
+        android:textSize="15dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
 
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="45dp"
-            android:background="@drawable/shape_2"
-            android:hint="  Фамилия"
-            android:inputType="textEmailAddress"
-            android:textAlignment="textStart"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.603"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.432" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="@drawable/shape_2"
+        android:ems="10"
+        android:hint="Введите пароль"
+        android:inputType="textEmailAddress"
+        android:password="true"
+        android:textSize="15dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.587" />
 
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="45dp"
-            android:background="@drawable/shape_2"
-            android:hint="  Имя"
-            android:inputType="textEmailAddress"
-            android:textAlignment="textStart"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.603"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.432" />
-
-        <EditText
-            android:id="@+id/textFieldLogin"
-            android:layout_width="300dp"
-            android:layout_height="45dp"
-            android:background="@drawable/shape_2"
-            android:hint="  Отчество"
-            android:inputType="textEmailAddress"
-            android:textAlignment="textStart"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.603"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.432" />
-
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="300dp"
-            android:layout_height="45dp"
-            android:background="@drawable/shape_2"
-            android:hint="  E-mail"
-            android:inputType="textEmailAddress"
-            android:textAlignment="textStart"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.603"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.432" />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="300dp"
-            android:layout_height="45dp"
-            android:background="@drawable/shape_2"
-            android:ems="10"
-            android:hint="  Введите пароль"
-            android:inputType="textEmailAddress"
-            android:password="true"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.603"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.536" />
-
-        <EditText
-            android:id="@+id/password2"
-            android:layout_width="300dp"
-            android:layout_height="45dp"
-            android:background="@drawable/shape_2"
-            android:ems="10"
-            android:hint="  Повторите пароль"
-            android:inputType="textEmailAddress"
-            android:password="true"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.603"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.64" />
+    <EditText
+        android:id="@+id/password2"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:background="@drawable/shape_2"
+        android:ems="10"
+        android:hint="Повторите пароль"
+        android:inputType="textEmailAddress"
+        android:password="true"
+        android:textSize="15dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.699" />
 
     <Button
         android:id="@+id/signup_btn"
@@ -134,7 +90,7 @@
         android:onClick="signup"
         android:text="ЗАРЕГИСТРИРОВАТЬСЯ"
         android:textColor="@color/bejev"
-        android:textSize="21dp"
+        android:textSize="19dp"
         android:textStyle="italic"
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -142,7 +98,7 @@
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839" />
+        app:layout_constraintVertical_bias="0.898" />
 
     <Button
         android:layout_width="100dp"

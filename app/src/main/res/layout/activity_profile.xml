@@ -8,24 +8,25 @@
     tools:context=".ProfileActivity"
     android:background="@drawable/fon">
 
+
     <ImageButton
         android:id="@+id/choose"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:onClick="ImageProfile"
+        android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintCircleRadius="700dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.258" />
-
+        app:layout_constraintVertical_bias="0.286" />
 
     <TextView
         android:id="@+id/textViewz"
         android:layout_width="300dp"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:background="@drawable/shape"
         android:gravity="center"
         android:text="ПРОФИЛЬ"
@@ -40,6 +41,7 @@
         app:layout_constraintVertical_bias="0.113"
 
         />
+
 
     <Button
         android:id="@+id/save_profile"
@@ -58,8 +60,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
-
+        app:layout_constraintVertical_bias="0.976" />
 
     <Button
         android:id="@+id/btn_back"
@@ -81,90 +82,90 @@
         app:layout_constraintVertical_bias="0.023" />
 
 
-
     <EditText
         android:id="@+id/textFieldFio"
         android:layout_width="300dp"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:background="@drawable/shape_2"
         android:hint="Фамилия Имя Отчество"
         android:inputType="textEmailAddress"
+        android:padding="8dp"
         android:textAlignment="textStart"
         android:textSize="15dp"
-        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias="0.518" />
 
     <EditText
         android:id="@+id/textFieldEmail"
         android:layout_width="300dp"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:background="@drawable/shape_2"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
+        android:padding="8dp"
         android:textAlignment="textStart"
         android:textSize="15dp"
-        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintVertical_bias="0.603" />
 
     <EditText
         android:id="@+id/textFieldData"
         android:layout_width="300dp"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:background="@drawable/shape_2"
         android:hint="Дата рождения"
         android:inputType="textEmailAddress"
+        android:padding="8dp"
         android:textAlignment="textStart"
         android:textSize="15dp"
-        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661" />
+        app:layout_constraintVertical_bias="0.683" />
 
     <EditText
         android:id="@+id/textFieldCity"
         android:layout_width="300dp"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:background="@drawable/shape_2"
+        android:gravity="center"
         android:hint="Город"
         android:inputType="textEmailAddress"
+        android:padding="8dp"
         android:textAlignment="textStart"
         android:textSize="15dp"
-        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.747" />
+        app:layout_constraintVertical_bias="0.767" />
 
     <EditText
         android:id="@+id/textFieldTelephone"
         android:layout_width="300dp"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:background="@drawable/shape_2"
         android:hint="Номер телефона"
+        android:padding="8dp"
         android:textAlignment="textStart"
         android:textSize="15dp"
-        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83" />
+        app:layout_constraintVertical_bias="0.849" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
