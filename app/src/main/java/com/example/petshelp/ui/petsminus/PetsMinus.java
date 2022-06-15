@@ -40,6 +40,7 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 
 
+import java.util.Random;
 import java.util.regex.Pattern;
 
 
@@ -141,8 +142,8 @@ System.out.println(s);
         // настраиваем список
         ListView listView = (ListView) inflatedView.findViewById(R.id.listView);
         listView.setAdapter(boxAdapter);
-        int size = products.size();
-        Log.e("1",String.valueOf(size));
+        //int size = products.size();
+       // Log.e("1",String.valueOf(size));
 
         // Прослушиваем нажатия клавиш
         name.setOnKeyListener(new View.OnKeyListener() {
@@ -151,10 +152,15 @@ System.out.println(s);
                     if (keyCode == KeyEvent.KEYCODE_ENTER) {
 
 
-
+                        int min = 10000;
+                        int max = 99999;
+                        int diff = max - min;
+                        Random random = new Random();
+                        int i = random.nextInt(diff + 1);
+                        i += min;
                         int size = products.size();
 
-                        String idPitomic = String.valueOf(size);
+                        String idPitomic = String.valueOf(i);
 
                         storage = FirebaseStorage.getInstance();
                         storageReference = storage.getReference();
@@ -184,8 +190,8 @@ System.out.println(s);
                 Pitomec msg = snapshot.getValue(Pitomec.class);
                 products.add(msg);
                 boxAdapter.notifyDataSetChanged();
-                int size = products.size();
-                Log.e("1",String.valueOf(size));
+               // int size = products.size();
+               // Log.e("1",String.valueOf(size));
                // Toast.makeText(PetsMinus.this.getActivity(), String.valueOf(size), Toast.LENGTH_SHORT).show();
             }
 
